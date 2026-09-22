@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"__shd_screenFX_example",
+  "name":"__shd_screenFX_example",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

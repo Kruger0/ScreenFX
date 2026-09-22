@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_screenFX_saturation",
+  "name":"shd_screenFX_saturation",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

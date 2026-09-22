@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenFXColourTintEffectClass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenFXColourTintEffectClass",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

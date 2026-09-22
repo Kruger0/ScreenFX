@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenFXSaturationEffectClass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenFXSaturationEffectClass",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

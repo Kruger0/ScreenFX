@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_screenFX_colour_tint",
+  "name":"shd_screenFX_colour_tint",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}
