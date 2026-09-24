@@ -1,4 +1,4 @@
-function ScreenFXInvertEffectClass(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
+function ScreenFXInvertEffect(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static _name = "ScreenFXInvert";
 	static __priority = 1;
 	static __shader = shd_screenFX_invert;

@@ -1,4 +1,4 @@
-function ScreenFXPixelateEffectClass(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
+function ScreenFXPixelateEffect(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static _name = "ScreenFXPixelate";
 	static __priority = 6;
 	static __shader = shd_screenFX_pixelate;

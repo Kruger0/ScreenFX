@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ScreenFXInvertEffectClass",
+  "%Name":"ScreenFXColourTintEffect",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ScreenFXInvertEffectClass",
+  "name":"ScreenFXColourTintEffect",
   "parent":{
     "name":"ScreenFX",
     "path":"folders/ScreenFX.yy",

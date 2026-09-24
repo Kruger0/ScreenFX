@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ScreenFXColourTintEffectClass",
+  "%Name":"ScreenFXPixelateEffect",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ScreenFXColourTintEffectClass",
+  "name":"ScreenFXPixelateEffect",
   "parent":{
     "name":"ScreenFX",
     "path":"folders/ScreenFX.yy",

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ScreenFXPixelateEffectClass",
+  "%Name":"ScreenFXInvertEffect",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ScreenFXPixelateEffectClass",
+  "name":"ScreenFXInvertEffect",
   "parent":{
     "name":"ScreenFX",
     "path":"folders/ScreenFX.yy",

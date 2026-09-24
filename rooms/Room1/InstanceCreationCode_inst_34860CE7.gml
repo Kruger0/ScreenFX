@@ -1,1 +1,1 @@
-renderer.AddEffect(new ScreenFXPixelateEffectClass());
+renderer.AddEffect(new ScreenFXPixelateEffect());

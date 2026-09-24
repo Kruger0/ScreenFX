@@ -1,7 +1,7 @@
 if (keyboard_check_released(vk_space)) {
-	//renderer.AddEffect(ScreenFXVignetteEffectClass);
-	renderer.AddEffect(ScreenFXPixelateEffectClass);
-	//renderer.AddEffect(new ScreenFXSaturationEffectClass({
+	//renderer.AddEffect(ScreenFXVignetteEffect);
+	renderer.AddEffect(ScreenFXPixelateEffect);
+	//renderer.AddEffect(new ScreenFXSaturationEffect({
 	//	saturation: 0.25,
 	//}));
 }

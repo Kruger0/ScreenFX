@@ -1,4 +1,4 @@
-function ScreenFXSaturationEffectClass(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
+function ScreenFXSaturationEffect(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static _name = "ScreenFXSaturation";
 	static __priority = 3;
 	static __shader = shd_screenFX_saturation;

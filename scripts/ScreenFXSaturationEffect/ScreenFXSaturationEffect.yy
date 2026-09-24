@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ScreenFXVignetteEffectClass",
+  "%Name":"ScreenFXSaturationEffect",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ScreenFXVignetteEffectClass",
+  "name":"ScreenFXSaturationEffect",
   "parent":{
     "name":"ScreenFX",
     "path":"folders/ScreenFX.yy",
