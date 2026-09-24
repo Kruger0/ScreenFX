@@ -1,1 +1,1 @@
-renderer.AddEffect(new ScreenFXVignetteEffect());
+renderer.AddEffect(new ScreenFXEffectVignette());

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"ScreenFX",
-    "path":"ScreenFX.yyp",
+    "name":"Region",
+    "path":"folders/ScreenFX/Region.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,1 +1,1 @@
-renderer.AddEffect(new ScreenFXPosterizationEffect());
+renderer.AddEffect(new ScreenFXEffectPosterization());

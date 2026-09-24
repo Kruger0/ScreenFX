@@ -1,1 +1,1 @@
-renderer.AddEffect(ScreenFXInvertEffect);
+renderer.AddEffect(new ScreenFXEffectInvert());

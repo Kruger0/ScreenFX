@@ -1,12 +1,23 @@
+/// @param {Struct} vars
 function ScreenFXBaseEffectClass(_vars = undefined) constructor {
 	static __name = "ScreenFXBase";
 	static __priority = -1;
 	static __dirtyCallback = function() {};
 	static __cleanupCallback = function() {};
-	static __shader = __shd_screenFX_example;
+	static __SerializeVars = function() {return GetVars()};
+	static __shader = __shd_screenFX_passthrough;
+	static __Serialise = function() {
+		return {
+			vars: __SerailiseVars(),
+			className: instanceof(self),
+		};
+	};
 
 	__dirty = true;
+	__enabled = true;	
+
 	vars = {};
+
 	if (is_struct(_vars)) {
 		struct_foreach(_vars, function(_name, _value) {
 			vars[$ _name] = _value;
@@ -26,13 +37,24 @@ function ScreenFXBaseEffectClass(_vars = undefined) constructor {
 		return vars[$ _name];
 	};
 
-	static Apply = function(_surf) {
+	static SetRenderState = function(_value) {
+		__enabled = _value;
+		return self;
+	};
+
+	static GetName = function() {
+		return __name;
+	};
+
+	static Apply = function(_surf, _dt) {
 		shader_set(__shader);
 		draw_surface(_surf, 0, 0);
 		shader_reset();
 	};
 }
 
+/// @param {String} name
+/// @param {Any} value
 function ScreenFXEffectVarsEnsure() {
 	for(var _i = 0; _i < argument_count; _i +=2) {
 		vars[$ argument[_i]] ??= argument[_i+1];

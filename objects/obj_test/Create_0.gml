@@ -1,3 +1,7 @@
 application_surface_draw_enable(false);
 
-renderer = new ScreenFX();
+renderer = new ScreenFXRenderer();
+
+profile = new ScreenFXProfile("Test", [
+	new ScreenFXEffectPixelate()
+]);

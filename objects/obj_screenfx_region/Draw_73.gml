@@ -38,7 +38,7 @@ surface_set_target(surface);
 	gpu_set_alphatestenable(true);
 	gpu_set_alphatestref(127);
 	gpu_set_colorwriteenable(false, false, false, false);
-	draw_sprite_ext(spr_screenfx_region_mask, 0, _w div 2, _h div 2, image_xscale, image_yscale, image_angle, c_white, 1);
+	draw_sprite_ext(regionMask, 0, _w div 2, _h div 2, image_xscale, image_yscale, image_angle, c_white, 1);
 	gpu_set_colorwriteenable(true, true, true, true);
 	gpu_set_alphatestenable(false);
 	
