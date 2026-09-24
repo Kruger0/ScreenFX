@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_screenFX_vignette",
+  "name":"shd_screenFX_vignette",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

@@ -5,6 +5,7 @@ function ScreenFX() constructor {
 	__pingPongB = handle_parse("ref surface -1");
 	__autoSort = true;
 	__renderEffects = true;
+	__formatOverride = undefined;
 
 	static SetAutoSort = function(_value) {
 		if (!is_bool(_value)) throw "bad!";
@@ -14,6 +15,15 @@ function ScreenFX() constructor {
 
 	static GetAutoSort = function() {
 		return __autoSort;
+	};
+
+	static SetOverrideFormat = function(_value) {
+		__formatOverride = _value;
+		return self;
+	};
+
+	static GetOverrideFormat = function() {
+		return __formatOverride;
 	};
 
 	static SetRenderEffects = function(_value) {
@@ -165,7 +175,7 @@ function ScreenFX() constructor {
 	};
 
 	static __RenderEffects = function(_surf) {
-		__RegenPingPong(surface_get_width(_surf), surface_get_height(_surf), surface_get_format(_surf));
+		__RegenPingPong(surface_get_width(_surf), surface_get_height(_surf), __formatOverride ?? surface_get_format(_surf));
 		__PrepareEffects();
 		surface_copy(__pingPongA, 0, 0, _surf);
 

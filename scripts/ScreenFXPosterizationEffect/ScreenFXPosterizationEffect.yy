@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenFXPosterizationEffect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenFXPosterizationEffect",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_screenFX_invert",
+  "name":"shd_screenFX_invert",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

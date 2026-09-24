@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenFXVignetteEffectClass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenFXVignetteEffectClass",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

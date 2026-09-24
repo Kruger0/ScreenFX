@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenFXPixelateEffectClass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenFXPixelateEffectClass",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,1 +1,1 @@
-draw_sprite(spr_test, 0, mouse_x, mouse_y);
+draw_sprite(pexels_aykutkilic_20468914, 0, mouse_x, mouse_y);
