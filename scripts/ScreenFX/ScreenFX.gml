@@ -53,6 +53,15 @@ function ScreenFX() constructor {
 		return _effect;
 	};
 
+	static AddEffectExt = function() {
+		var _i = 0;
+		repeat(argument_count) {
+			var _effectClass = argument[_i++];
+			var _effect = is_callable(_effectClass) ? new _effectClass() : _effectClass;
+			array_push(__effects, _effect);
+		}
+	};
+
 	static RemoveEffect = function(_index) {
 		var _effect = __effects[_index];
 		_effect.__cleanupCallback();

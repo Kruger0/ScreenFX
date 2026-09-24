@@ -1,3 +1,5 @@
 renderer = new ScreenFX();
 surface = -1;
-debug = true;
+imageAngleDirty = NaN;
+imageXScaleDirty = NaN;
+imageYScaleDirty = NaN;

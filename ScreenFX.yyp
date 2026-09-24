@@ -40,6 +40,7 @@
     {"id":{"name":"shd_screenFX_saturation","path":"shaders/shd_screenFX_saturation/shd_screenFX_saturation.yy",},},
     {"id":{"name":"shd_screenFX_vignette","path":"shaders/shd_screenFX_vignette/shd_screenFX_vignette.yy",},},
     {"id":{"name":"pexels_aykutkilic_20468914","path":"sprites/pexels_aykutkilic_20468914/pexels_aykutkilic_20468914.yy",},},
+    {"id":{"name":"spr_screenfx_region_mask","path":"sprites/spr_screenfx_region_mask/spr_screenfx_region_mask.yy",},},
     {"id":{"name":"spr_screenfx_region","path":"sprites/spr_screenfx_region/spr_screenfx_region.yy",},},
     {"id":{"name":"spr_test","path":"sprites/spr_test/spr_test.yy",},},
   ],
