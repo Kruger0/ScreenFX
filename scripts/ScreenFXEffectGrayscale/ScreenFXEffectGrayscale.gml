@@ -9,7 +9,7 @@ function ScreenFXEffectGrayscale(_vars = undefined) : ScreenFXBaseEffectClass(_v
 		"saturation", 0,
 	);
 
-	static Apply = function(_surf, _time) {
+	static __Apply = function(_surf, _time) {
 		shader_set(__shader);
 		shader_set_uniform_f(_uSaturation, vars.saturation);
 		draw_surface(_surf, 0, 0);

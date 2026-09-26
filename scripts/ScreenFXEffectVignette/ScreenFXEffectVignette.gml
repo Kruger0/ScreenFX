@@ -11,7 +11,7 @@ function ScreenFXEffectVignette(_vars = undefined) : ScreenFXBaseEffectClass(_va
 		"falloff", 0.5,
 	);
 
-	static Apply = function(_surf, _time) {
+	static __Apply = function(_surf, _time) {
 		shader_set(__shader);
 		shader_set_uniform_f(_uAmount, vars.amount);
 		shader_set_uniform_f(_uFalloff, vars.falloff);

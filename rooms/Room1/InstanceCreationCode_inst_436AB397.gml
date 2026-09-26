@@ -1,1 +1,1 @@
-renderer.AddEffect(new ScreenFXEffectTone());
+renderer.AddEffect(new ScreenFXEffectSepiaTone());

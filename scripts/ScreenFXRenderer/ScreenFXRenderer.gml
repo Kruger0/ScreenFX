@@ -14,27 +14,6 @@ function ScreenFXRenderer() constructor {
 	
 	__frame = 0;
 
-	static ExportEffects = function() {
-		var _effects = array_map(__effects, function(_effect) {
-			return _effect.__Serialise();
-		});
-
-		return _effects;
-	};
-
-	static ImportEffects = function(_effects) {
-		ClearProfile();
-		ClearEffects();
-		array_foreach(_effects, function(_effect) {
-			var _classEffect = asset_get_index(_effect.className);
-			if (!is_callable(_classEffect)) {
-				
-			}
-
-			AddEffect(new _classEffect(_effect.vars));
-		});
-	};
-
 	static AddLayers = function() {
 		var _i = 0;
 		repeat(argument_count) {
@@ -67,6 +46,16 @@ function ScreenFXRenderer() constructor {
 
 		return self;
 	};
+
+	static RemoveLayer = function(_layer) {
+		var _layerId = is_string(_layer) ? layer_get_id(_layer) : _layer;
+		var _index = array_get_index(__layerIds, _layerId);
+		if (_index != -1) {
+			layer_script_begin(_layerId, -1);
+			layer_script_end(_layerId, -1);
+			array_delete(__layerIds, _index, 1);
+		}
+	}
 
 	static GetLayers = function() {
 		return variable_clone(__layerIds);
@@ -154,16 +143,27 @@ function ScreenFXRenderer() constructor {
 		}
 	};
 
+	static SetEffects = function() {
+		ClearProfile();
+		var _i = 0;
+		repeat(argument_count) {
+			var _effectClass = argument[_i++];
+			var _effect = is_callable(_effectClass) ? new _effectClass() : _effectClass;
+			array_push(__effects, _effect);
+			__dirtySort = true;
+		}
+	};
+
 	static RemoveEffect = function(_index) {
 		var _effect = __effects[_index];
-		_effect.__cleanupCallback();
+		_effect.__CleanupCallback();
 		array_delete(__effects, _index, 1);
 		__dirtySort = true;
 	};
 
 	static ClearEffects = function() {
 		array_foreach(__effects, function(_elm) {
-			_elm.__cleanupCallback();
+			_elm.__CleanupCallback();
 		});
 		array_resize(__effects, 0);
 	};
@@ -187,6 +187,22 @@ function ScreenFXRenderer() constructor {
 		if (_index >= array_length(__effects)) return undefined;
 
 		return __effects[_index];
+	};
+
+	static GetEffects = function() {
+		return variable_clone(__effects, 1);
+	};
+
+	static SetEffectsOrder = function(_effects) {
+		if (array_equals(__effects, _effects)) {
+			var _i = 0;
+			repeat(array_length(_effects)) {
+				__effects[_i] = _effects[_i];
+				++_i;	
+			}
+		}
+
+		return self;
 	};
 
 	static GetRenderOutput = function() {
@@ -313,17 +329,18 @@ function ScreenFXRenderer() constructor {
 
 		__frame += 1 * (delta_time / game_get_speed(gamespeed_microseconds));
 
+		gpu_set_blendmode_ext_sepalpha(bm_src_alpha, bm_inv_src_alpha, bm_one, bm_inv_src_alpha);
 		if (__renderEffects) {
 			for(var _i = 0, _len = array_length(__effects); _i < _len; ++_i) {
 				var _effect = __effects[_i];
 				if (_effect.__enabled) {
 					if (_effect.__dirty) {
-						_effect.__dirtyCallback();
+						_effect.__DirtyCallback();
 						_effect.__dirty = false;
 					}
         	    	
 					surface_set_target(_targetSurfA); 
-					_effect.Apply(_targetSurfB, __frame);
+					_effect.__Apply(_targetSurfB, __frame);
 					surface_reset_target();
 					_targetSurfC = _targetSurfA;
 					_targetSurfA = _targetSurfB;
@@ -331,6 +348,7 @@ function ScreenFXRenderer() constructor {
 				}
 			}
 		}
+		gpu_set_blendmode(bm_normal);
 
 		__renderStack = _targetSurfB;
 		return _targetSurfB;

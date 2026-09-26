@@ -9,7 +9,7 @@ function ScreenFXEffectInvert(_vars = undefined) : ScreenFXBaseEffectClass(_vars
 		"mix", 1,
 	);
 
-	static Apply = function(_surf, _time) {
+	static __Apply = function(_surf, _time) {
 		shader_set(__shader);
 		shader_set_uniform_f(_uMix, vars.mix);
 		draw_surface(_surf, 0, 0);

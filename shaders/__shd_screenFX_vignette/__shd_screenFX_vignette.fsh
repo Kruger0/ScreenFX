@@ -4,7 +4,8 @@ uniform float u_falloff;
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
-void main() {
+void main() 
+{
     vec4 color = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 
     float dist = distance(v_vTexcoord, vec2(0.5, 0.5));

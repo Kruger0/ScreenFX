@@ -3,7 +3,8 @@ varying vec4 v_vColour;
 
 uniform float u_posterizationLevel;
 
-void main() {
+void main() 
+{
     vec4 base = texture2D(gm_BaseTexture, v_vTexcoord);
     
     float gray = max(base.r, max(base.g, base.b));

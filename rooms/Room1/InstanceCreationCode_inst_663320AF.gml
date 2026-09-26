@@ -1,1 +1,1 @@
-renderer.AddEffect(new ScreenFXEffectShake());
+renderer.AddEffect(new ScreenFXEffectScreenshake());

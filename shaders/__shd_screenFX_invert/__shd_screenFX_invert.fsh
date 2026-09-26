@@ -3,7 +3,8 @@ uniform float u_mix;
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
-void main() {
+void main() 
+{
     vec4 color = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
     color.rgb = 1.0 - color.rgb * u_mix;
     gl_FragColor = color;

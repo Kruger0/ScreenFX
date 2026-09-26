@@ -9,7 +9,7 @@ function ScreenFXEffectPosterization(_vars = undefined) : ScreenFXBaseEffectClas
 		"posterizationLevel", 4,
 	);
 
-	static Apply = function(_surf, _time) {
+	static __Apply = function(_surf, _time) {
 		shader_set(__shader);
 		shader_set_uniform_f(_uPosterization, vars.posterizationLevel);
 		draw_surface(_surf, 0, 0);

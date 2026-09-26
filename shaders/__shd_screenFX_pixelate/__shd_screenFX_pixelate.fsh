@@ -9,7 +9,8 @@ uniform float u_amount;
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
-void main() {
+void main() 
+{
     float d = 1.0 / u_amount;
 	float ar = u_resolution.x / u_resolution.y;
 	float u = floor(v_vTexcoord.x / d) * d;

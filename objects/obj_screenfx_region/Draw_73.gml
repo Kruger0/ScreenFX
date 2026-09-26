@@ -25,6 +25,8 @@ var _finalX = x - _w / 2;
 var _finalY = y - _h / 2;
 
 
+if (!sphere_is_visible(_finalX, _finalY, depth, max(_w, _h))) exit;
+
 surface_set_target(surface);
 	draw_clear_alpha(c_black, 0);
 	

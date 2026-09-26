@@ -2,8 +2,8 @@
 function ScreenFXBaseEffectClass(_vars = undefined) constructor {
 	static __name = "ScreenFXBase";
 	static __priority = -1;
-	static __dirtyCallback = function() {};
-	static __cleanupCallback = function() {};
+	static __DirtyCallback = function() {};
+	static __CleanupCallback = function() {};
 	static __SerializeVars = function() {return GetVars()};
 	static __shader = __shd_screenFX_passthrough;
 	static __Serialise = function() {
@@ -42,11 +42,16 @@ function ScreenFXBaseEffectClass(_vars = undefined) constructor {
 		return self;
 	};
 
+	static GetRenderState = function() {
+		return __enabled;
+	};
+
+
 	static GetName = function() {
 		return __name;
 	};
 
-	static Apply = function(_surf, _time) {
+	static __Apply = function(_surf, _time) {
 		shader_set(__shader);
 		draw_surface(_surf, 0, 0);
 		shader_reset();

@@ -10,7 +10,7 @@ function ScreenFXEffectPixelate(_vars = undefined) : ScreenFXBaseEffectClass(_va
 		"amount", 32,
 	);
 
-	static Apply = function(_surf, _time) {
+	static __Apply = function(_surf, _time) {
 		shader_set(__shader);
 		shader_set_uniform_f(_uAmount, vars.amount);
 		shader_set_uniform_f(_uResolution, surface_get_width(_surf), surface_get_height(_surf));

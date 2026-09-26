@@ -33,18 +33,18 @@
     {"$GMObjectProperty":"v2","%Name":"debugBounds","filters":[],"listItems":[],"multiselect":false,"name":"debugBounds","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"regionMask","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"regionMask","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_screenfx_region_mask","path":"sprites/spr_screenfx_region_mask/spr_screenfx_region_mask.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_screenfx_region_mask","varDescription":"The mask to use to draw within.","varFriendlyName":"Region Mask","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"regionMask","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"__spr_screenfx_region_mask","path":"sprites/__spr_screenfx_region_mask/__spr_screenfx_region_mask.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"__spr_screenfx_region_mask","varDescription":"The mask to use to draw within.","varFriendlyName":"Region Mask","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_screenfx_region",
-    "path":"sprites/spr_screenfx_region/spr_screenfx_region.yy",
+    "name":"__spr_screenfx_region",
+    "path":"sprites/__spr_screenfx_region/__spr_screenfx_region.yy",
   },
   "spriteMaskId":{
-    "name":"spr_screenfx_region_mask",
-    "path":"sprites/spr_screenfx_region_mask/spr_screenfx_region_mask.yy",
+    "name":"__spr_screenfx_region_mask",
+    "path":"sprites/__spr_screenfx_region_mask/__spr_screenfx_region_mask.yy",
   },
   "visible":true,
 }
