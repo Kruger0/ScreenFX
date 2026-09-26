@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenFXEffectVarsEnsure",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenFXEffectVarsEnsure",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

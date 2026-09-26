@@ -7,4 +7,13 @@ function ScreenFXProfile(_name, _effects = []) constructor {
 	static GetName = function() {
 		return __name;
 	};
+
+	static Export = function() {
+		return {
+			vars: array_map(__effects, function(_effect) {
+				return _effect.__Serialise();
+			}),
+			name: __name,
+		};
+	};
 }

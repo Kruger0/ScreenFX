@@ -46,12 +46,15 @@ surface_set_target(surface);
 	gpu_set_stencil_read_mask(1);
 	gpu_set_stencil_pass(stencilop_keep);
 	gpu_set_stencil_func(cmpfunc_equal);
-	
-	draw_surface_general(application_surface, _finalX, _finalY, _w, _h, 0, 0, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
+
+	var _x = camera_get_view_x(view_camera[view_current]);	
+	var _y = camera_get_view_y(view_camera[view_current]);
+
+	draw_surface_general(application_surface, _finalX -_x, _finalY- _y, _w, _h, 0, 0, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
 	gpu_set_stencil_enable(false);
 surface_reset_target();
 
-renderer.DrawExt(surface, _finalX, _finalY, 1, 1, 0, c_white, 1);
+renderer.Draw(surface, _finalX, _finalY);
 
 if (debug) {
 	draw_self();

@@ -42,6 +42,9 @@
     "name":"spr_screenfx_region",
     "path":"sprites/spr_screenfx_region/spr_screenfx_region.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_screenfx_region_mask",
+    "path":"sprites/spr_screenfx_region_mask/spr_screenfx_region_mask.yy",
+  },
   "visible":true,
 }

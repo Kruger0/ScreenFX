@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectVignette(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "ScreenFXInvert";
+	static _name = "Vignette";
 	static __priority = 4;
 	static __shader = __shd_screenFX_vignette;
 	static _uAmount = shader_get_uniform(__shader, "u_amount");
@@ -11,7 +11,7 @@ function ScreenFXEffectVignette(_vars = undefined) : ScreenFXBaseEffectClass(_va
 		"falloff", 0.5,
 	);
 
-	static Apply = function(_surf, _dt) {
+	static Apply = function(_surf, _time) {
 		shader_set(__shader);
 		shader_set_uniform_f(_uAmount, vars.amount);
 		shader_set_uniform_f(_uFalloff, vars.falloff);

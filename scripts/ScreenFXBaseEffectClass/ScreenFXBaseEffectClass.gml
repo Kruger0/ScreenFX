@@ -46,17 +46,9 @@ function ScreenFXBaseEffectClass(_vars = undefined) constructor {
 		return __name;
 	};
 
-	static Apply = function(_surf, _dt) {
+	static Apply = function(_surf, _time) {
 		shader_set(__shader);
 		draw_surface(_surf, 0, 0);
 		shader_reset();
 	};
-}
-
-/// @param {String} name
-/// @param {Any} value
-function ScreenFXEffectVarsEnsure() {
-	for(var _i = 0; _i < argument_count; _i +=2) {
-		vars[$ argument[_i]] ??= argument[_i+1];
-	}
 }

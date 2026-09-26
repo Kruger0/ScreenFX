@@ -10,6 +10,9 @@ function ScreenFXRenderer() constructor {
 	__renderStack = handle_parse("ref surface -1");
 	__profile = undefined;
 	__layerIds = [];
+	__timeCallback = function() {return current_time / 10;};
+	
+	__frame = 0;
 
 	static ExportEffects = function() {
 		var _effects = array_map(__effects, function(_effect) {
@@ -308,7 +311,7 @@ function ScreenFXRenderer() constructor {
 		var _targetSurfB = __pingPongA;
 		var _targetSurfC;
 
-		var _dt = delta_time / game_get_speed(gamespeed_microseconds);
+		__frame += 1 * (delta_time / game_get_speed(gamespeed_microseconds));
 
 		if (__renderEffects) {
 			for(var _i = 0, _len = array_length(__effects); _i < _len; ++_i) {
@@ -320,7 +323,7 @@ function ScreenFXRenderer() constructor {
 					}
         	    	
 					surface_set_target(_targetSurfA); 
-					_effect.Apply(_targetSurfB, _dt);
+					_effect.Apply(_targetSurfB, __frame);
 					surface_reset_target();
 					_targetSurfC = _targetSurfA;
 					_targetSurfA = _targetSurfB;
