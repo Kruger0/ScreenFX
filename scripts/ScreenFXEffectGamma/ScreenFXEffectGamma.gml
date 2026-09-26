@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectGamma(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Gamma";
+	static __name = "Gamma";
 	static __priority = 6;
 	static __shader = __shd_screenFX_gamma;
 	static _uGamma = shader_get_uniform(__shader, "u_gamma");

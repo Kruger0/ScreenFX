@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectVignette(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Vignette";
+	static __name = "Vignette";
 	static __priority = 4;
 	static __shader = __shd_screenFX_vignette;
 	static _uAmount = shader_get_uniform(__shader, "u_amount");

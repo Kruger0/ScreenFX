@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectWobble(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Wobble";
+	static __name = "Wobble";
 	static __priority = 100_000;
 	static __shader = __shd_screenFX_wobble;
 	static _uTime = shader_get_uniform(__shader, "u_time");

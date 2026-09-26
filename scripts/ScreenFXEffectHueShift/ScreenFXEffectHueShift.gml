@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectHueShift(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Hue Shift";
+	static __name = "Hue Shift";
 	static __priority = 8;
 	static __shader = __shd_screenFX_hue_shift;
 	static _uShift = shader_get_uniform(__shader, "u_shift");

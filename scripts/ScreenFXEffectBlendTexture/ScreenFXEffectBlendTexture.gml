@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectBlendTexture(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Blend Texture";
+	static __name = "Blend Texture";
 	static __priority = -10;
 	static __shader = __shd_screenFX_blend_texture;
 	static _uOpacity = shader_get_uniform(__shader, "u_opacity");

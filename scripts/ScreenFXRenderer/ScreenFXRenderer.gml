@@ -189,6 +189,7 @@ function ScreenFXRenderer() constructor {
 		return __effects[_index];
 	};
 
+	/// @return {Array<Struct.ScreenFXBaseEffectClass>}
 	static GetEffects = function() {
 		return variable_clone(__effects, 1);
 	};

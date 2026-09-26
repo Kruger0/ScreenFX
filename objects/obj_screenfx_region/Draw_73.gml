@@ -59,6 +59,19 @@ surface_reset_target();
 renderer.Draw(surface, _finalX, _finalY);
 
 if (debug) {
-	draw_self();
+	if (debugRegion) draw_self();
 	if (debugBounds) draw_rectangle_colour(bbox_left, bbox_top, bbox_right, bbox_bottom, c_white, c_white, c_white, c_white, true);
+	if (debugEffectNames) {
+		var _names = array_map(renderer.GetEffects(), function(_effect) {
+			return _effect.GetName();
+		});
+		
+		_names = string_join_ext("\n", _names);
+
+		draw_set_alpha(0.8);
+		draw_rectangle_colour(bbox_left+4, bbox_top, bbox_left+4 + string_width(_names)+8, bbox_top+string_height(_names)+4, c_black, c_black, c_black, c_black, false);
+		draw_set_colour(c_white);
+		draw_text(bbox_left + 8, bbox_top, _names);
+		draw_set_alpha(1);
+	}
 }

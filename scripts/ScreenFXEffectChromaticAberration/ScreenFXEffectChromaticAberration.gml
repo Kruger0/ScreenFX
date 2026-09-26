@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectChromaticAberration(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Chromatic Aberration";
+	static __name = "Chromatic Aberration";
 	static __priority = 4;
 	static __shader = __shd_screenFX_chromatic_aberration;
 	static _uSamples = shader_get_uniform(__shader, "u_samples");

@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectPosterization(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Posterization";
+	static __name = "Posterization";
 	static __priority = 6;
 	static __shader = __shd_screenFX_posterization;
 	static _uPosterization = shader_get_uniform(__shader, "u_posterizationLevel");

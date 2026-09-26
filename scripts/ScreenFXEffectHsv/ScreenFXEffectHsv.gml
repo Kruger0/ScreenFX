@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectHsv(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Hsv";
+	static __name = "Hsv";
 	static __priority = 8;
 	static __shader = __shd_screenFX_hsv;
 	static _uHsv = shader_get_uniform(__shader, "u_hsv");

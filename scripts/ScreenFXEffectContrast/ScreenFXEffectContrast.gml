@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectContrast(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Contrast";
+	static __name = "Contrast";
 	static __priority = 7;
 	static __shader = __shd_screenFX_contrast;
 	static _uContrast = shader_get_uniform(__shader, "u_contrast");

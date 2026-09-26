@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectBrightnessConstrast(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Brightness Contrast";
+	static __name = "Brightness Contrast";
 	static __priority = 4;
 	static __shader = __shd_screenFX_brightness_contrast;
 	static _uBrightness = shader_get_uniform(__shader, "u_brightness");

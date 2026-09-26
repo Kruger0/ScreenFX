@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectFXAA(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "FXAA";
+	static __name = "FXAA";
 	static __priority = 4;
 	static __shader = __shd_screenFX_fxaa;
 	static _uResolution = shader_get_uniform(__shader, "u_resolution");

@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectBackgroundOverlay(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Background Overlay";
+	static __name = "Background Overlay";
 	static __priority = -1;
 	static __shader = __shd_screenFX_background_overlay;
 	static _uMaxBrightness = shader_get_uniform(__shader, "u_max_brightness");

@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectInvert(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Invert";
+	static __name = "Invert";
 	static __priority = 1;
 	static __shader = __shd_screenFX_invert;
 	static _uMix = shader_get_uniform(__shader, "u_mix");

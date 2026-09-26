@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectBloom(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Bloom";
+	static __name = "Bloom";
 	static __priority = 11;
 	static __shaderCutoff = __shd_screenFX_bloom_cutoff;
 	static __shaderBlurH = __shd_screenFX_bloom_blur_h;

@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectScreenshake(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Screenshake";
+	static __name = "Screenshake";
 	static __priority = 9_999_999;
 	static __shader = __shd_screenFX_screenshake;
 	static _uMagnitude = shader_get_uniform(__shader, "u_magnitude");

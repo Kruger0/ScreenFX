@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectColourTint(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Tint";
+	static __name = "Tint";
 	static __priority = 2;
 	static __shader = __shd_screenFX_colour_tint;
 

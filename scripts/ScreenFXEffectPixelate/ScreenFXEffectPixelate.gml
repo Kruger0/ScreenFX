@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectPixelate(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Pixelate";
+	static __name = "Pixelate";
 	static __priority = 6;
 	static __shader = __shd_screenFX_pixelate;
 	static _uAmount = shader_get_uniform(__shader, "u_amount");

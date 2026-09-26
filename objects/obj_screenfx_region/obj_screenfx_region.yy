@@ -29,11 +29,13 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"debug","filters":[],"listItems":[],"multiselect":false,"name":"debug","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
-    {"$GMObjectProperty":"v2","%Name":"debugBounds","filters":[],"listItems":[],"multiselect":false,"name":"debugBounds","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"regionMask","filters":[
         "GMSprite",
       ],"listItems":[],"multiselect":false,"name":"regionMask","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"__spr_screenfx_region_mask","path":"sprites/__spr_screenfx_region_mask/__spr_screenfx_region_mask.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"__spr_screenfx_region_mask","varDescription":"The mask to use to draw within.","varFriendlyName":"Region Mask","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"debug","filters":[],"listItems":[],"multiselect":false,"name":"debug","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"debugBounds","filters":[],"listItems":[],"multiselect":false,"name":"debugBounds","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"debugRegion","filters":[],"listItems":[],"multiselect":false,"name":"debugRegion","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"debugEffectNames","filters":[],"listItems":[],"multiselect":false,"name":"debugEffectNames","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

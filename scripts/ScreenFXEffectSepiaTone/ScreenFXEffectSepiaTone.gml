@@ -1,6 +1,6 @@
 /// @param {Struct} vars
 function ScreenFXEffectSepiaTone(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
-	static _name = "Tone";
+	static __name = "Tone";
 	static __priority = 3;
 	static __shader = __shd_screenFX_sepia_tone;
 	static _uTone = shader_get_uniform(__shader, "u_tone");
