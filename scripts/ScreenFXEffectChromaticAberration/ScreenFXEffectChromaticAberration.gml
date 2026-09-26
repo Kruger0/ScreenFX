@@ -2,7 +2,7 @@
 function ScreenFXEffectChromaticAberration(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "Chromatic Aberration";
 	static __priority = 4;
-	static __shader = __shd_screenFX_chromatic_aberration;
+	static __shader = os_type == os_gxgames ? __shd_screenFX_chromatic_aberration_webgl	: __shd_screenFX_chromatic_aberration;
 	static _uSamples = shader_get_uniform(__shader, "u_samples");
 	static _uContrast = shader_get_uniform(__shader, "u_contrast");
 	static _uOffset = shader_get_uniform(__shader, "u_offset");

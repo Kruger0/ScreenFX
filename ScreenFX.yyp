@@ -86,6 +86,7 @@
     {"id":{"name":"__shd_screenFX_bloom_cutoff","path":"shaders/__shd_screenFX_bloom_cutoff/__shd_screenFX_bloom_cutoff.yy",},},
     {"id":{"name":"__shd_screenFX_brightness_contrast","path":"shaders/__shd_screenFX_brightness_contrast/__shd_screenFX_brightness_contrast.yy",},},
     {"id":{"name":"__shd_screenFX_brightness","path":"shaders/__shd_screenFX_brightness/__shd_screenFX_brightness.yy",},},
+    {"id":{"name":"__shd_screenFX_chromatic_aberration_webgl","path":"shaders/__shd_screenFX_chromatic_aberration_webgl/__shd_screenFX_chromatic_aberration_webgl.yy",},},
     {"id":{"name":"__shd_screenFX_chromatic_aberration","path":"shaders/__shd_screenFX_chromatic_aberration/__shd_screenFX_chromatic_aberration.yy",},},
     {"id":{"name":"__shd_screenFX_colour_tint","path":"shaders/__shd_screenFX_colour_tint/__shd_screenFX_colour_tint.yy",},},
     {"id":{"name":"__shd_screenFX_contrast","path":"shaders/__shd_screenFX_contrast/__shd_screenFX_contrast.yy",},},

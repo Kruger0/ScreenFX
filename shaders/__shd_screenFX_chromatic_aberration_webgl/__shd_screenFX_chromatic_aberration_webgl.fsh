@@ -15,7 +15,7 @@ void main()
 	vec4 colour_sum = vec4(0);
 	vec4 weight_sum = vec4(0);
 	
-	for(float i = 0.0; i<=1.0; i+=1.0/u_samples)
+	for(float i = 0.0; i<=1.0; i+=1.0/SAMPLES_WEBGL)
 	{
 	    vec2 coord = mix(v_vTexcoord, vec2(0.5), (i-0.5) * u_offset);
 	    vec4 colour = texture2D(gm_BaseTexture, coord);

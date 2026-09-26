@@ -16,7 +16,7 @@ profile = new ScreenFXProfile("Test", [
 view_enabled = true;
 view_visible[0] = true;
 
-show_debug_overlay(true, true);
+//show_debug_overlay(true, true);
 
 call_later(1, time_source_units_frames, function() {
 	with(obj_screenfx_region) {
