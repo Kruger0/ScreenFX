@@ -22,11 +22,11 @@ function ScreenFXEffectBackgroundOverlay(_vars = undefined) : ScreenFXBaseEffect
 		"yoffset", 0,
 		"timescale", 1,
 		"xscale", 1,
-		"yscale", 1,
+		"yscale", 1
 	);
 
 	static __Apply = function(_surf, _time) {
-		var _texture = is_handle(vars.surface) ? surface_get_texture(vars.surface) : sprite_get_texture(vars.sprite, vars.image_index ?? _time);
+		var _texture = surface_exists(vars.surface) ? surface_get_texture(vars.surface) : sprite_get_texture(vars.sprite, vars.image_index ?? _time);
 		shader_set(__shader);
 		shader_set_uniform_f(_uMaxBrightness, vars.minFade);
 		shader_set_uniform_f(_uIntensity, vars.intensity);

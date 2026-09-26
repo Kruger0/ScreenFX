@@ -256,6 +256,10 @@ function ScreenFXRenderer() constructor {
 		if (event_type == ev_draw) {
 			switch(event_number) {
 				case ev_draw_post:
+					if (os_type == os_gxgames) {
+						DrawStretched(application_surface, 0, 0, GXCanvasGetCanvasWidth(), GXCanvasGetCanvasHeight());
+						return;
+					}
 					var _pos = application_get_position();
 					var _xx = _pos[0];
 					var _yy = _pos[1];
