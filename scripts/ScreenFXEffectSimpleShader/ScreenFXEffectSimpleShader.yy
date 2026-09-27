@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ScreenFXEffectSimpleShader",
   "parent":{
-    "name":"ScreenFX",
-    "path":"folders/ScreenFX.yy",
+    "name":"Built-in Effects",
+    "path":"folders/ScreenFX/Built-in Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
