@@ -38,7 +38,7 @@ Yes. It's completely free. Licensed under MIT. Feel free to do whatever you wish
 
 ## What effects are there?
 
-There is frankly a lot to list, and I do not have the time or energy to do all of that. In the future I hope to get this onto a proper documentation page, but for now you can just enjoy this.
+There is frankly a lot to list, and I do not have the time or energy to do all of that. In the future I hope to get this onto a proper documentation page, but for now you can just check out the relevant `ScreenFXEffects*` scripts.
 
 ## Does this work across all platforms?
 
