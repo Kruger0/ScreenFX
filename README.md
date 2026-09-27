@@ -1,4 +1,4 @@
-# ScreenFX
+# ScreenFX v1.0.0
 Post processing effects library for GameMaker LTS 2026
 
 
