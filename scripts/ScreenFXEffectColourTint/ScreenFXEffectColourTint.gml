@@ -1,4 +1,4 @@
-/// @param {Struct} vars
+// feather ignore all // feather ignore all
 function ScreenFXEffectColourTint(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "Tint";
 	static __priority = 2;

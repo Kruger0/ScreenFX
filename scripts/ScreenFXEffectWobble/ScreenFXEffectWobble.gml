@@ -1,3 +1,4 @@
+// feather ignore all
 /// @param {Struct} vars
 function ScreenFXEffectWobble(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "Wobble";

@@ -11,6 +11,10 @@ profile = new ScreenFXProfile("Test", [
 		timescale: .01,
 	}),
 	new ScreenFXEffectBlendTexture(),
+	new ScreenFXEffectGaussianBlur({
+		blur_radius_v: 15,
+		blur_radius_h: 15,
+	}),
 ]);
 
 view_enabled = true;

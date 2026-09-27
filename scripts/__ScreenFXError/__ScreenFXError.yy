@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__ScreenFXError",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__ScreenFXError",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/ScreenFX/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

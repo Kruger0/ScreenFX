@@ -1,10 +1,7 @@
-//
-// Simple passthrough fragment shader
-//
+uniform float u_bloom_size;
+
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
-
-uniform float u_bloom_size;
 
 void main()
 {

@@ -15,3 +15,4 @@ _hspd *= 6;
 var _x = camera_get_view_x(view_camera[0])+_hspd;
 var _y = camera_get_view_y(view_camera[0])+_vspd;
 camera_set_view_pos(view_camera[0], _x, _y);
+//surface_resize(application_surface, window_get_width(), window_get_height());

@@ -1,3 +1,4 @@
+// feather ignore all
 /// @param {Struct} vars
 function ScreenFXEffectChromaticAberration(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "Chromatic Aberration";

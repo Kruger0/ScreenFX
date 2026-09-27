@@ -9,7 +9,7 @@ var _finalX = x - _w / 2;
 var _finalY = y - _h / 2;
 
 
-if (!sphere_is_visible(_finalX, _finalY, depth, max(_w, _h))) exit;
+if (autoExitEarly) && (!sphere_is_visible(_finalX, _finalY, depth, max(_w, _h))) exit;
 
 if (!surface_exists(surface)) {
 	surface = surface_create(_w, _h);

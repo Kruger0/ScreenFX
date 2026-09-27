@@ -1,3 +1,4 @@
+// feather ignore all
 /// @param {Struct} vars
 function ScreenFXEffectScreenshake(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "Screenshake";

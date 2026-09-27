@@ -1,3 +1,4 @@
+// feather ignore all
 function ScreenFXRenderer() constructor {
 	__effects = [];
 	__dirtySort = false;
@@ -14,6 +15,8 @@ function ScreenFXRenderer() constructor {
 	
 	__frame = 0;
 
+
+	/// @param {String, Id.Layer} layer
 	static AddLayers = function() {
 		var _i = 0;
 		repeat(argument_count) {
@@ -47,6 +50,7 @@ function ScreenFXRenderer() constructor {
 		return self;
 	};
 
+	/// @param {String, Id.Layer} layer
 	static RemoveLayer = function(_layer) {
 		var _layerId = is_string(_layer) ? layer_get_id(_layer) : _layer;
 		var _index = array_get_index(__layerIds, _layerId);
@@ -57,6 +61,7 @@ function ScreenFXRenderer() constructor {
 		}
 	}
 
+	/// @return {Array<Id.Layer>}
 	static GetLayers = function() {
 		return variable_clone(__layerIds);
 	};
@@ -69,6 +74,8 @@ function ScreenFXRenderer() constructor {
 		array_resize(__layerIds, 0);
 	};
 
+
+	/// @param {Struct.ScreenFXProfile} profile
 	static SetProfile = function(_profile) {
 		__profile = _profile;
 		ClearEffects();
@@ -81,6 +88,7 @@ function ScreenFXRenderer() constructor {
 		ClearEffects();
 	};
 
+	/// @return {Struct.ScreenFXProfile}
 	static GetProfile = function() {
 		return __profile;
 	};
@@ -90,8 +98,9 @@ function ScreenFXRenderer() constructor {
 		return "";
 	};
 
+	/// @param {Bool} autoSort
 	static SetAutoSort = function(_value) {
-		if (!is_bool(_value)) throw "bad!";
+		if (!is_bool(_value)) __ScreenFXError($"SetAutoSort() Must be a bool! Got \"{_value}\".");
 		__autoSort = _value;
 		return self;
 	};
@@ -100,6 +109,7 @@ function ScreenFXRenderer() constructor {
 		return __autoSort;
 	};
 
+	/// @param {Constant.SurfaceFormatType} surfaceFormat
 	static SetOverrideFormat = function(_value) {
 		__formatOverride = _value;
 		return self;
@@ -109,9 +119,10 @@ function ScreenFXRenderer() constructor {
 		return __formatOverride;
 	};
 
+	/// @param {Bool} renderEffects
 	static SetRenderEffects = function(_value) {
-		if (!is_bool(_value)) throw "bad!";
-		__renderEffects = _value;
+		if (!is_bool(_value)) __ScreenFXError($"SetRenderEffects() Must be a bool! Got \"{_value}\".");
+		__renderEffects = bool(_value);
 		return self;
 	};
 
@@ -126,6 +137,7 @@ function ScreenFXRenderer() constructor {
 		ClearProfile();
 	};
 
+	/// @param {Struct.ScreenFXBaseEffectClass} effect
 	static AddEffect = function(_effectClass) {
 		var _effect = is_callable(_effectClass) ? new _effectClass() : _effectClass;
 		array_push(__effects, _effect);
@@ -133,6 +145,7 @@ function ScreenFXRenderer() constructor {
 		return _effect;
 	};
 
+	/// @param {Struct.ScreenFXBaseEffectClass} effect
 	static AddEffectExt = function() {
 		var _i = 0;
 		repeat(argument_count) {
@@ -143,6 +156,7 @@ function ScreenFXRenderer() constructor {
 		}
 	};
 
+	/// @param {Struct.ScreenFXBaseEffectClass} effect
 	static SetEffects = function() {
 		ClearProfile();
 		var _i = 0;
@@ -195,12 +209,14 @@ function ScreenFXRenderer() constructor {
 	};
 
 	static SetEffectsOrder = function(_effects) {
-		if (array_equals(__effects, _effects)) {
-			var _i = 0;
-			repeat(array_length(_effects)) {
-				__effects[_i] = _effects[_i];
-				++_i;	
-			}
+		if (array_equals(__effects, _effects) == false) {
+
+		}
+
+		var _i = 0;
+		repeat(array_length(_effects)) {
+			__effects[_i] = _effects[_i];
+			++_i;	
 		}
 
 		return self;
@@ -210,6 +226,7 @@ function ScreenFXRenderer() constructor {
 		return __renderStack;
 	};
 
+	/// @param {Function} class
 	static FindEffectByClass = function(_class) {
 		var _index;
 		with({_class}) _index = array_find_index(__effects, function(_elm, _index) {
@@ -228,37 +245,80 @@ function ScreenFXRenderer() constructor {
 		array_sort(__effects, _callback);
 	};
 
+	/// @param {Function} callback
 	static FilterEffects = function(_callback) {
 		return array_filter(__effects, _callback);
 	};
 
+	/// @param {Id.Surface} surface
+	/// @param {Real} x
+	/// @param {Real} y
 	static Draw = function(_surf, _x, _y) {
 		draw_surface(__RenderEffects(_surf), _x, _y);
 	};
 
+	/// @param {Id.Surface} surface
+	/// @param {Real} x
+	/// @param {Real} y
+	/// @param {Real} xscale
+	/// @param {Real} yscale
+	/// @param {Real} angle
+	/// @param {Real, Constant.Colour} blend
+	/// @param {Real} alpha
 	static DrawExt = function(_surf, _x, _y, _xscale, _yscale, _angle, _blend, _alpha) {
 		draw_surface_ext(__RenderEffects(_surf), _x, _y, _xscale, _yscale, _angle, _blend, _alpha);
 	};
 	
+	/// @param {Id.Surface} surface
+	/// @param {Real} x
+	/// @param {Real} y
+	/// @param {Real} width
+	/// @param {Real} height
 	static DrawStretched = function(_surf, _x, _y, _w, _h) {
 		draw_surface_stretched(__RenderEffects(_surf), _x, _y, _w, _h);
 	};
 
+	/// @param {Id.Surface} surface
+	/// @param {Real} left
+	/// @param {Real} top
+	/// @param {Real} width
+	/// @param {Real} height
+	/// @param {Real} x
+	/// @param {Real} y
+	/// @param {Real} xscale
+	/// @param {Real} yscale
+	/// @param {Real} angle
+	/// @param {Real, Constant.Colour} blend1
+	/// @param {Real, Constant.Colour} blend2
+	/// @param {Real, Constant.Colour} blend3
+	/// @param {Real, Constant.Colour} blend4
+	/// @param {Real} alpha
 	static DrawGeneral = function(_surface, _left, _top, _width, _height, _x, _y, _xscale, _yscale, _angle, _blend, _blend2, _blend3, _blend4, _alpha) {
 		draw_surface_general(__RenderEffects(_surface), _left, _top, _width, _height, _x, _y, _xscale, _yscale, _angle, _blend, _blend2, _blend3, _blend4, _alpha);
 	};
 
+	/// @param {Id.Surface} surface
+	/// @param {Real} left
+	/// @param {Real} top
+	/// @param {Real} width
+	/// @param {Real} height
+	/// @param {Real} x
+	/// @param {Real} y
 	static DrawPart = function(_surf, _left, _top, _width, _height, _x, _y) {
 		draw_surface_part(__RenderEffects(_surf), _left, _top, _width, _height, _x, _y);
 	};
 
 	static DrawApplicationSurface = function() {
+		static _usesGXCanvas = extension_exists("GXCanvas");
+
 		if (event_type == ev_draw) {
 			switch(event_number) {
 				case ev_draw_post:
 					if (os_type == os_gxgames) {
-						DrawStretched(application_surface, 0, 0, GXCanvasGetCanvasWidth(), GXCanvasGetCanvasHeight());
-						return;
+						if (_usesGXCanvas) {
+							DrawStretched(application_surface, 0, 0, GXCanvasGetCanvasWidth(), GXCanvasGetCanvasHeight());
+							return;
+						}
 					}
 					var _pos = application_get_position();
 					var _xx = _pos[0];

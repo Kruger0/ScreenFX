@@ -1,13 +1,18 @@
+// feather ignore all
+/// @param {String} name
+/// @param {Array<Struct.ScreenFXBaseEffectClass>} effects
 function ScreenFXProfile(_name, _effects = []) constructor {
-	static __name = _name;
+	__name = _name;
 	__effects = array_map(_effects, function(_elm) {
 		return is_callable(_elm) ? new _elm() : _elm;
 	});
 
+	/// @return {String}
 	static GetName = function() {
 		return __name;
 	};
 
+	/// @return {Struct}
 	static Export = function() {
 		return {
 			vars: array_map(__effects, function(_effect) {

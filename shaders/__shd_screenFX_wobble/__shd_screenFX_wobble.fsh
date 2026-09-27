@@ -1,11 +1,11 @@
-varying vec2 v_vTexcoord;
-varying vec4 v_vColour;
-
 uniform sampler2D u_flow_map; 
 uniform float u_strength;
 uniform float u_speed;      
 uniform int u_frames; 
 uniform float u_time;
+
+varying vec2 v_vTexcoord;
+varying vec4 v_vColour;
 
 float clock(float time){
 	float frames = float(u_frames);

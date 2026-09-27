@@ -1,3 +1,4 @@
+// feather ignore all
 /// @param {Struct} vars
 function ScreenFXEffectFXAA(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "FXAA";

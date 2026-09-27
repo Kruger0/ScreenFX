@@ -1,3 +1,4 @@
+// feather ignore all
 /// @param {Struct} vars
 function ScreenFXEffectHueShift(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "Hue Shift";

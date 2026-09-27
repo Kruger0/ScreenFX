@@ -1,3 +1,4 @@
+// feather ignore all
 /// @param {Struct} vars
 function ScreenFXEffectContrast(_vars = undefined) : ScreenFXBaseEffectClass(_vars) constructor {
 	static __name = "Contrast";
