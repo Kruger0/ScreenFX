@@ -47,7 +47,7 @@ A majority of them have been checked to ensure that they at least work. In theor
 
 ## May I PR to this, whether it's a fix or adding a new shader?
 
-Yes! Please see the [contribution](https://github.com/tabularelf/ScreenFX/blob/main/CONTRIBUTING.md) document before proceeding!
+Yes! Please see the [contribution](https://github.com/tabularelf/ScreenFX/blob/main/CONTRIBUTING.MD) document before proceeding!
 
 ## How can I get started learning shaders?
 
