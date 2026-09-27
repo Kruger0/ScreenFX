@@ -73,6 +73,8 @@ The best one is the one that works the best for you. Whether it is using one tha
 
 ## Alternatives?
 
-There isn't a whole lot of alternatives, but here is some I can recall from the top of my head.
+There isn't a whole lot of alternatives, but here is some I can recall from the top of my head.<br>
+If I have missed any, please feel free to link them!
 
 [PPFX](https://foxyofjungle.itch.io/post-processing-fx)
+[PostFX](https://github.com/sdelaughter/PostFX)
