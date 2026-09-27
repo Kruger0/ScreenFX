@@ -69,7 +69,7 @@ LearnOpenGL: https://learnopengl.com/
 
 ## Is this the best library ever for post processing effects?
 
-The best one is the one that works the best for you. Whether it is using one that already exists, or making your own system. This library is purely the best for me, because I need it for a game template that I can freely redistribute, and for making it easier to shader custom post processing packs.
+The best one is the one that works the best for you. Whether it is using one that already exists, or making your own system. This library is purely the best for me, because I need it for a game template that I can freely redistribute, and for making it easier to make custom post processing packs.
 
 ## Alternatives?
 
