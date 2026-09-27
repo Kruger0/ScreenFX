@@ -34,7 +34,7 @@ renderer.DrawApplicationSurface();
 
 ## Is this free?
 
-Yes. It's completely free. Licensed under MIT. Feel free to do whatever you wish with that info.
+Yes. It's completely free. Licensed under MIT. Feel free to do whatever you wish with that info. The only thing I ask is that you credit me.
 
 ## What effects are there?
 
