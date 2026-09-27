@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ScreenFXEffectSimpleShader",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScreenFXEffectSimpleShader",
+  "parent":{
+    "name":"ScreenFX",
+    "path":"folders/ScreenFX.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

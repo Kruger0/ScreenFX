@@ -81,6 +81,7 @@
     {"id":{"name":"ScreenFXEffectPosterization","path":"scripts/ScreenFXEffectPosterization/ScreenFXEffectPosterization.yy",},},
     {"id":{"name":"ScreenFXEffectScreenshake","path":"scripts/ScreenFXEffectScreenshake/ScreenFXEffectScreenshake.yy",},},
     {"id":{"name":"ScreenFXEffectSepiaTone","path":"scripts/ScreenFXEffectSepiaTone/ScreenFXEffectSepiaTone.yy",},},
+    {"id":{"name":"ScreenFXEffectSimpleShader","path":"scripts/ScreenFXEffectSimpleShader/ScreenFXEffectSimpleShader.yy",},},
     {"id":{"name":"ScreenFXEffectVarsEnsure","path":"scripts/ScreenFXEffectVarsEnsure/ScreenFXEffectVarsEnsure.yy",},},
     {"id":{"name":"ScreenFXEffectVignette","path":"scripts/ScreenFXEffectVignette/ScreenFXEffectVignette.yy",},},
     {"id":{"name":"ScreenFXEffectWobble","path":"scripts/ScreenFXEffectWobble/ScreenFXEffectWobble.yy",},},
