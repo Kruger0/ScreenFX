@@ -51,7 +51,7 @@ Yes! Please see the [contribution](https://github.com/tabularelf/ScreenFX/blob/m
 
 ## How can I get started learning shaders?
 
-There is quite a fair amount of resources on how to make shaders, that do not just expand amongst GameMaker! GameMaker however uses a very old version of OpenGL, prescisely 1.00 rev 17. So some resources may need some conversion.
+There is quite a fair amount of resources on how to make shaders, that do just expand beyond GameMaker! GameMaker however uses a very old version of OpenGL, prescisely 1.00 rev 17. So some resources may need some conversion.
 
 Here is a list of recommended resources to check out.
 
