@@ -42,6 +42,7 @@
     {"id":{"name":"__GXCanvasSystem","path":"scripts/__GXCanvasSystem/__GXCanvasSystem.yy",},},
     {"id":{"name":"__GXCanvasWASMHandler","path":"scripts/__GXCanvasWASMHandler/__GXCanvasWASMHandler.yy",},},
     {"id":{"name":"__ScreenFXError","path":"scripts/__ScreenFXError/__ScreenFXError.yy",},},
+    {"id":{"name":"__ScreenFXInit","path":"scripts/__ScreenFXInit/__ScreenFXInit.yy",},},
     {"id":{"name":"GXCanvasForceCallResolutionHandler","path":"scripts/GXCanvasForceCallResolutionHandler/GXCanvasForceCallResolutionHandler.yy",},},
     {"id":{"name":"GXCanvasGetAutoRunResolutionHandler","path":"scripts/GXCanvasGetAutoRunResolutionHandler/GXCanvasGetAutoRunResolutionHandler.yy",},},
     {"id":{"name":"GXCanvasGetFullScale","path":"scripts/GXCanvasGetFullScale/GXCanvasGetFullScale.yy",},},

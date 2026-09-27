@@ -12,10 +12,42 @@ Post processing effects library for GameMaker LTS 2026
 renderer = new ScreenFXRenderer();
 ```
 
+2. Add your desire effects and their settings. 
+```gml
+// i.e.
+// Note: Passing in a constructor function as-is without new X() will do it for you.
+renderer.AddEffectExt(
+	new ScreenFXEffectPosterization(),
+	new ScreenFXVignette(),
+	new ScreenFXBloom(),
+	new ScreenFXHueShift({
+		shift: 128
+	}),
+);
+```
+
+3. Draw it!
+```
+// Post Draw Event
+renderer.DrawApplicationSurface();
+```
+
+## Is this free?
+
+Yes. It's completely free. Licensed under MIT. Feel free to do whatever you wish with that info.
+
+## What effects are there?
+
+There is frankly a lot to list, and I do not have the time or energy to do all of that. In the future I hope to get this onto a proper documentation page, but for now you can just enjoy this.
+
 ## Does this work across all platforms?
 
 At the time of writing, not every single shader has been tested on every single platform.<br>
-A majority of them have been checked to ensure that they at least work. 
+A majority of them have been checked to ensure that they at least work. In theory the amount of issues should be very low. But feel free to reach out if there is any problems.
+
+## May I PR to this, whether it's a fix or adding a new shader?
+
+Yes! Please see the [contribution](https://github.com/tabularelf/ScreenFX/blob/main/CONTRIBUTING.md) document before proceeding!
 
 ## How can I get started learning shaders?
 
@@ -34,3 +66,13 @@ GamvingReverend: https://www.youtube.com/channel/UC7fkptPD1FHQyDc9Fnm9S_A
 Unofficial OpenGL tutorials: https://www.opengl-tutorial.org/
 
 LearnOpenGL: https://learnopengl.com/
+
+## Is this the best library ever for post processing effects?
+
+The best one is the one that works the best for you. Whether it is using one that already exists, or making your own system. This library is purely the best for me, because I need it for a game template that I can freely redistribute, and for making it easier to shader custom post processing packs.
+
+## Alternatives?
+
+There isn't a whole lot of alternatives, but here is some I can recall from the top of my head.
+
+[PPFX](https://foxyofjungle.itch.io/post-processing-fx)

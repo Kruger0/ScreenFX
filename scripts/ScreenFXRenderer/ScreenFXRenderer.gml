@@ -209,8 +209,8 @@ function ScreenFXRenderer() constructor {
 	};
 
 	static SetEffectsOrder = function(_effects) {
-		if (array_equals(__effects, _effects) == false) {
-
+		if (!array_equals(__effects, _effects)) {
+			__ScreenFXError("The provided effects do not match what is within the renderer");
 		}
 
 		var _i = 0;
@@ -310,6 +310,10 @@ function ScreenFXRenderer() constructor {
 
 	static DrawApplicationSurface = function() {
 		static _usesGXCanvas = extension_exists("GXCanvas");
+		
+		if (!application_surface_is_enabled()) {
+			__ScreenFXError("Cannot use .DrawApplicationSurface() as there is no application surface available!");
+		}
 
 		if (event_type == ev_draw) {
 			switch(event_number) {
